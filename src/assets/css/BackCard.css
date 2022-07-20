@@ -1,0 +1,154 @@
+.BackCard_wrapper {
+    height: 100%;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.BackCard_word {
+    font-weight: 600;
+    color: #152D35;
+    font-size: 1.2rem;
+}
+
+.BackCard_typeItem {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.BackCard_typeItem.BackCard_typeItemDontKnow {
+    flex-direction: row-reverse;
+}
+
+.BackCard_typeItemDontKnow .BackCard_expandExample {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.BackCard_wordType {
+    display: inline-flex;
+    align-items: center;
+    color: #152D35;
+    margin-bottom: 5px;
+    /*padding-right: 10px;*/
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.BackCard_wordType:hover {
+    font-weight: 700;
+}
+
+.BackCard_wordType > div:first-child {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+.BackCard_wordMean {
+    font-size: 1rem;
+    color: #345B63;
+    cursor: pointer;
+    font-style: italic;
+    letter-spacing: 0.8px;
+}
+
+.BackCard_wordMean:hover {
+    color: #79B4B7;
+}
+
+.BackCard_expandExample {
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.BackCard_expandExample svg {
+    font-size: 1.2rem;
+}
+
+.BackCard_popoverExample {
+    width: 100%;
+    /*display: none;*/
+}
+.BackCard_popoverView {
+    display: none;
+}
+
+.BackCard_popoverContent {
+    width: 600px;
+    max-width: calc(100vw - 60px);
+    height: 400px;
+    max-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+    position: relative;
+}
+
+.BackCard_example {
+    max-width: calc(100% - 40px);
+}
+
+.BackCard_textExample {
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #152D35;
+    cursor: pointer;
+}
+
+.BackCard_textExample:hover {
+    color: #79B4B7;
+}
+
+
+
+.BackCard_popoverTitle {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #E05D5D;
+    border-bottom: 2px dashed;
+    min-height: 50px;
+    margin: auto auto 10px;
+}
+
+.BackCard_popoverListExample {
+    height: calc(100% - 60px);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.BackCard_popoverListExample::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.BackCard_popoverListExample::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.BackCard_popoverListExample::-webkit-scrollbar-thumb {
+    background: #345B63;
+}
+
+/* Handle on hover */
+.BackCard_popoverListExample::-webkit-scrollbar-thumb:hover {
+    background: #152D35;
+}
+
+.BackCard_popoverClose {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.BackCard_popoverClose svg {
+    font-size: 1.5rem;
+}

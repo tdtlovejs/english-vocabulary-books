@@ -1,0 +1,373 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+#root {
+    height: 100%;
+}
+.App_wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*padding: 0 10px;*/
+    background-color: #EDEDED;
+    /*height: 720px;*/
+    overflow: hidden;
+}
+
+.App_header {
+    color: #152d35;
+    font-weight: 700;
+    padding: 20px 0;
+    font-size: 1.5rem;
+}
+
+.App_bookHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    height: 60px;
+    max-width: 600px;
+}
+
+.App_bookBack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid #152D35;
+    padding: 5px 10px;
+    border-radius: 7px;
+    width: 100px;
+    color: #152D35;
+}
+
+.App_bookBack:hover {
+    justify-content: flex-start;
+    font-weight: 600;
+}
+.App_bookBack svg {
+    margin-right: 10px;
+}
+
+.App_bookBack svg path {
+    fill: #152D35;
+}
+
+.App_bookBack > div {
+    /*font-weight: 600;*/
+}
+.App_bookTitle {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.App_bookTitle .App_titleDescription {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #628395;
+}
+
+.App_titleDescription sup {
+    font-weight: 600;
+}
+.App_bookContent {
+    height: calc(100% - 60px);
+    width: 600px;
+    max-width: calc(100% - 20px);
+    padding-top: 20px;
+}
+
+
+
+.App_nameCurrentBook {
+    color: #152D35;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px;
+}
+.App_descriptionCurrentBook {
+    color: #628395;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.App_descriptionCurrentBook sup {
+    font-weight: 600;
+}
+.App_btnCurrentBook {
+    cursor: pointer;
+    background-color: #FF865E;
+    /*border-radius: 7px;*/
+    padding: 5px 20px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    height: 36px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App_btnCurrentBook:hover {
+    font-size: 1rem;
+}
+.App_bookItemWrapper {
+    width: 400px;
+    height: 400px;
+    background-color: #A8E7E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #5d4343;
+}
+
+.App_bookCarousel {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+    /*transform: translateY(-50%)*/
+}
+
+.App_bookCarousel > div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+}
+
+.App_bookHideLeft {
+    left: 0;
+    opacity: 0!important;
+    transform: translateY(50%) translateX(-50%);
+}
+
+.App_bookHideLeft .App_bookItemWrapper {
+    width: 200px;
+    height: 200px;
+}
+
+.App_bookPrevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(100px) translateX(-50%);
+    opacity: .7!important;
+}
+
+.App_bookPrevLeftSecond .App_bookItemWrapper {
+    width: 200px;
+    height: 200px;
+}
+
+.App_bookPrev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-50%);
+}
+
+.App_bookPrev .App_bookItemWrapper {
+    width: 300px;
+    height: 300px;
+}
+
+.App_bookSelected {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+}
+
+.App_bookNext {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%);
+}
+
+.App_bookNext .App_bookItemWrapper {
+    width: 300px;
+    height: 300px;
+}
+
+.App_bookNextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(100px) translateX(-50%);
+    opacity: .7!important;
+}
+
+.App_bookNextRightSecond .App_bookItemWrapper {
+    width: 200px;
+    height: 200px;
+}
+
+.App_bookHideRight {
+    left: 100%;
+    opacity: 0!important;
+    transform: translateY(50%) translateX(-50%);
+}
+
+.App_bookHideRight .App_bookItemWrapper {
+    width: 200px;
+    height: 200px;
+}
+
+.App_action {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 600px;
+    max-width: calc(100% - 20px);
+}
+.App_action > div {
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 120px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.App_actionPrev {
+    background-color: #FE9898;
+    border-radius: 15px 0 0 15px;
+    color: #fff;
+}
+
+.App_actionPrev:hover {
+    justify-content: flex-start;
+    background-color: #FF6767;
+}
+
+.App_actionNext {
+    background-color: #1DB9C3;
+    border-radius: 0 15px 15px 0;
+    color: #fff;
+}
+.App_actionNext:hover {
+    justify-content: flex-end;
+    background-color: #368B85;
+}
+@media only screen and (max-width: 320px) {
+    .App_bookCarousel {
+        height: 200px!important;
+    }
+    .App_bookHideLeft .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .App_bookPrevLeftSecond .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .App_bookPrevLeftSecond {
+        transform: translateY(40px) translateX(-50%);
+    }
+    .App_bookPrev {
+        transform: translateY(20px) translateX(-50%);
+    }
+
+    .App_bookPrev .App_bookItemWrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .App_bookSelected .App_bookItemWrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .App_bookNext .App_bookItemWrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .App_bookNext {
+        transform: translateY(20px) translateX(-50%);
+    }
+    .App_bookNextRightSecond .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .App_bookNextRightSecond {
+        transform: translateY(40px) translateX(-50%);
+    }
+    .App_bookHideRight .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px){
+    .App_bookCarousel {
+        height: 240px!important;
+    }
+    .App_bookHideLeft .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .App_bookPrevLeftSecond .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .App_bookPrevLeftSecond {
+        transform: translateY(60px) translateX(-50%);
+    }
+    .App_bookPrev .App_bookItemWrapper {
+        width: 180px;
+        height: 180px;
+    }
+    .App_bookPrev {
+        transform: translateY(30px) translateX(-50%);
+    }
+    .App_bookSelected .App_bookItemWrapper {
+        width: 240px;
+        height: 240px;
+    }
+    .App_bookNext .App_bookItemWrapper {
+        width: 180px;
+        height: 180px;
+    }
+    .App_bookNext {
+        transform: translateY(30px) translateX(-50%);
+    }
+    .App_bookNextRightSecond .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .App_bookNextRightSecond {
+        transform: translateY(60px) translateX(-50%);
+    }
+    .App_bookHideRight .App_bookItemWrapper {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.AudioPlay_wrapper {
+    padding-right: 10px;
+    position: relative;
+}
+
+.AudioPlay_wrapper .soundPlay {
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.AudioPlay_wrapper .soundPlay svg path {
+    fill: #152D35;
+}

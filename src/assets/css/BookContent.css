@@ -1,0 +1,55 @@
+.BookContent_wrapper {
+    width: calc(100% - 20px);
+    height: 480px;
+    max-height: calc(100vh - 80px);
+    margin: auto;
+}
+.BookContent_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+}
+.BookContent_header .count {
+    position: absolute;
+    height: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    right: -20px;
+    font-weight: 600;
+}
+.BookContent_header .active {
+    border-bottom: 2px solid #152D35;
+}
+.BookContent_header svg {
+    font-size: 1.2rem;
+}
+.BookContent_header svg path {
+    fill: #152D35;
+}
+.BookContent_filterDontKnow {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+    color: #fff;
+}
+.BookContent_filterDontKnow .count {
+    background-color: #E05D5D;
+}
+.BookContent_filterKnow {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+    color: #152D35;
+}
+.BookContent_filterKnow .count {
+    background-color: #80ED99;
+}

@@ -1,0 +1,155 @@
+.Card_cardWrapper {
+    height: calc(100% - 60px);
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+}
+.Card_cardWrapper.Buy{
+    background-color:#2ecc71;
+}
+.Card_cardWrapper.Pass{
+    background-color:#e74c3c;
+}
+.Card_cardWrapper.flipped .Card_viewCardFlipper{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.Card_viewCardFlipper {
+    width: 100%;
+    height: calc(100% - 80px);
+    position: relative;
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.Card_cardFront, .Card_cardBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+.Card_cardFront {
+    z-index: 2;
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    background-color: #EADEB8;
+}
+.Card_cardBack {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    background-color: #EEEEEE;
+}
+.Card_action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.Card_btnDontKnow {
+    background-color: #E05D5D;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    border-radius: 20px 0 0 20px;
+    padding: 0px 20px;
+    height: 40px;
+    width: 140px;
+    transition: justify-content 2s;
+}
+.Card_btnDontKnow:hover {
+    justify-content: flex-start;
+}
+.Card_btnKnow {
+    background-color: #80ED99;
+    color: #152D35;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    padding: 0px 20px;
+    height: 40px;
+    width: 140px;
+    transition: justify-content 2s;
+}
+.Card_btnKnow:hover {
+    justify-content: flex-end;
+}
+.stamp {
+    position:absolute;
+    z-index:11;
+    transform: rotate(12deg);
+    color: #555;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 0.25rem solid #555;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    -webkit-mask-image: url('./../images/grunge.png');
+    -webkit-mask-size: 944px 604px;
+    transition: opacity ease .5s;
+
+}
+.isDontKnow {
+    color: #E05D5D;
+    border: 0.5rem double #E05D5D;
+    transform: rotate(30deg);
+    -webkit-mask-position: 2rem 3rem;
+    font-size: 1rem;
+    right:10px;
+    top:35px;
+}
+.isKnow {
+    color: #80ED99;
+    border: 0.5rem double #80ED99;
+    -webkit-mask-position: 13rem 6rem;
+    transform: rotate(-30deg);
+    font-size: 1rem;
+    left:10px;
+    top:35px;
+}
